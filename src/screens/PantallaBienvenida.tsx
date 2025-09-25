@@ -2,7 +2,7 @@ import React from "react";
 import { View, ScrollView, TouchableOpacity, Image, Text, } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function PantallaBienvenida() {
+export default function PantallaBienvenida({ navigation }: any) {
 	return (
 		<SafeAreaView 
 			style={{
@@ -174,7 +174,7 @@ export default function PantallaBienvenida() {
 							},
 							shadowRadius: 6,
 							elevation: 6,
-						}} onPress={()=>alert('Pressed!')}>
+						}} onPress={() => navigation.navigate('InicioSesion')}>
 						<Text 
 							style={{
 								color: "#FFFFFF",
