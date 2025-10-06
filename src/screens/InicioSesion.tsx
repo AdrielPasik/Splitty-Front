@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SafeAreaView, View, Text, StyleSheet, TextInput, TouchableOpacity, Image, KeyboardAvoidingView, Platform, ScrollView } from "react-native";
 
-export default function NuevaPantalla({ navigation }: any) {
+export default function InicioSesion({ navigation }: any) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -50,7 +50,7 @@ export default function NuevaPantalla({ navigation }: any) {
             <TouchableOpacity style={styles.forgotPasswordButton} onPress={() => navigation.navigate('RestablecerContraseña')}>
               <Text style={styles.forgotPasswordText}>¿Olvidaste tu contraseña?</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.loginButton} onPress={() => {}}>
+            <TouchableOpacity style={styles.loginButton} onPress={() => navigation.replace('Main')}>
               <Text style={styles.loginButtonText}>Iniciar Sesión</Text>
             </TouchableOpacity>
             <View style={styles.orContainer}>
